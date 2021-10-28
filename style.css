@@ -19,8 +19,40 @@ header {
   left: 0;
   width: 100%;
   padding: 28px 153px;
+  flex-flow: row wrap ;
+  gap:10px;
 }
-header .logo {
+@media(max-width: 800px) {
+  header{
+    justify-content: space-around;
+    background: #537069;
+     color: #e5e5e5;
+  }
+  header ul{
+    flex-grow:3;
+    margin-left: 120px;
+    padding-right: 20px;
+    flex-direction: column;
+    width:100%;
+  }
+ 
+  header ul li {
+    justify-content: space-around;
+    padding-right:0 ;
+    margin-left: 0;
+    align-self: center;
+    margin: 10px;
+    
+  }
+ .goto{
+   color: #f6bd60;
+   font-size: 35px;
+ }
+  
+}
+
+
+.logo {
   color: #598278;
   font-weight: 700;
   text-decoration: none;
@@ -46,23 +78,33 @@ header ul li a {
   color: #598278;
 }
 
-#link,
-#btn {
+.link,
+.btn {
   /* margin-left: 140px; */
   text-decoration: none;
 }
-#link {
+.link {
   color: #e0a340;
   font-weight: 500;
 }
 
-#btn {
+.btn {
   color: #fff;
   font-weight: 500;
   background: #84a59d;
   padding: 33px 100px;
   border-radius: 24px;
   border: 3px #ebb969 solid;
+}
+@media (max-width:800px) {
+  .btn{
+    color: #e0a340;
+    font-weight: 500;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+  
 }
 
 .line {
@@ -78,9 +120,14 @@ main {
   /* padding-top: 160px; */
   align-self: center;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: row wrap;
+  
 }
-
+@media (max-width:800px){
+  main{
+    flex-flow: row wrap;
+  }
+}
 main h1 h4 {
   display: flex;
   flex-direction: column-reverse;
@@ -100,6 +147,15 @@ main h1 h4 {
   align-items: center;
   letter-spacing: 0.13em;
   color: #e0a340;
+}
+@media (max-width:800px){
+  .great{
+    font-size: 32px;
+    padding:0px;
+    line-height: 100%;
+    letter-spacing: 0.1em;
+    width: 100%;
+  }
 }
 .under {
   position: relative;
